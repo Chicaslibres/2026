@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChicasLibres — Contra la Sextorsión</title>
+  <meta name="description" content="ChicasLibres: información, acompañamiento y herramientas para denunciar y borrar contenido íntimo. No estás sola.">
+  <style>
+    :root{
+      --pink-1:#ff1f7a; /* fuerte */
+      --pink-2:#ff77c8; /* suave */
+      --bg:#ffffff;
+      --muted:#6b6b6b;
+      --card:#fff0f6;
+      --maxw:1100px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;background:var(--bg);color:#222;line-height:1.5;font-size:16px;
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* Header / Hero */
+    .hero{
+      display:flex;gap:28px;align-items:center;justify-content:space-between;padding:48px 28px;border-radius:18px;margin-top:14px;background:linear-gradient(135deg, rgba(255,127,175,0.06), rgba(255,247,250,0.45));box-shadow:0 6px 30px rgba(255,31,122,0.08);
+    }
+    .brand{max-width:60%}
+    .brand h1{margin:0;font-size:clamp(28px,4vw,48px);color:var(--pink-1);letter-spacing:1px}
+    .brand p{margin:12px 0;color:var(--muted);font-size:18px}
+    .hero-cta{display:flex;gap:12px;align-items:center}
+    .btn{display:inline-block;padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--pink-1),var(--pink-2));color:white;box-shadow:0 8px 30px rgba(255,31,122,0.18);}
+    .btn-outline{background:transparent;border:2px solid var(--pink-1);color:var(--pink-1)}
+
+    /* Features */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .card{background:linear-gradient(180deg,white,var(--card));border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(18,18,18,0.04)}
+    .card h3{margin:6px 0 10px;color:var(--pink-1)}
+    .card p{margin:0;color:var(--muted)}
+
+    /* Main content */
+    main{margin-top:28px}
+    section{margin:34px 0}
+    h2{color:var(--pink-1);margin:0 0 12px;font-size:22px}
+    p.lead{color:#333;font-size:18px}
+
+    /* Steps */
+    .steps{display:flex;flex-direction:column;gap:12px}
+    .step{display:flex;gap:14px;align-items:flex-start}
+    .step .num{min-width:48px;height:48px;border-radius:12px;background:linear-gradient(90deg,var(--pink-1),var(--pink-2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800}
+    .step .txt{flex:1}
+
+    /* Resources */
+    .resources{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .resource{padding:14px;border-radius:12px;background:#fff;border:1px solid rgba(255,31,122,0.06)}
+    .resource h4{margin:0 0 6px}
+    .resource p{margin:0 0 10px;color:var(--muted);font-size:14px}
+    .resource a{font-weight:700;text-decoration:none;color:var(--pink-1)}
+
+    /* FAQ */
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    details{background:#fff;border-radius:10px;padding:12px;border:1px solid rgba(0,0,0,0.04)}
+    summary{font-weight:700;cursor:pointer}
+
+    /* Partners / footer */
+    .partners{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .partner{padding:10px;border-radius:8px;background:linear-gradient(90deg,rgba(255,127,175,0.06),rgba(255,247,250,0.6));border:1px solid rgba(255,31,122,0.06)}
+
+    footer{margin-top:40px;padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .resources{grid-template-columns:repeat(2,1fr)}
+      .brand{max-width:100%}
+    }
+    @media(max-width:640px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      .faq{grid-template-columns:1fr}
+      .resources{grid-template-columns:1fr}
+    }
+
+    /* small animation */
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .floaty{animation:floaty 5s ease-in-out infinite}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" role="banner" aria-label="ChicasLibres">
+      <div class="brand">
+        <h1>ChicasLibres</h1>
+        <p>Alza tu voz. Protege tu dignidad. Acciones concretas contra la sextorsión y la violencia digital.</p>
+        <p class="muted">Recursos, acompañamiento legal y pasos claros para denunciar y pedir eliminación de contenido íntimo.</p>
+      </div>
+
+      <div class="hero-cta">
+        <!-- IMPORTANT: replace href="#" with the official NGO page URL you want the button to open -->
+        <a class="btn btn-primary" id="btn-denuncia" href="#" target="_blank" rel="noopener">HACER DENUNCIA ONLINE Y BORRAR CONTENIDO ÍNTIMO</a>
+        <a class="btn btn-outline" id="btn-info" href="#sec-recursos">VER RECURSOS</a>
+      </div>
+    </header>
+
+    <div class="grid" aria-hidden="false">
+      <div class="card">
+        <h3>Protección inmediata</h3>
+        <p>Guía paso a paso para detener la difusión y recuperar tu privacidad ahora mismo.</p>
+      </div>
+      <div class="card">
+        <h3>Acompañamiento legal</h3>
+        <p>Conexión con ONGs y abogados especializados en delitos digitales y violencia de género.</p>
+      </div>
+      <div class="card">
+        <h3>Borrado seguro</h3>
+        <p>Cómo solicitar eliminación de contenido en plataformas y motores de búsqueda.</p>
+      </div>
+    </div>
+
+    <main>
+      <section>
+        <h2>¿Qué es la sextorsión y por qué es violencia?</h2>
+        <p class="lead">La sextorsión es una forma grave de violencia digital: alguien usa imágenes, videos o mensajes íntimos para chantajear, obligar o humillar. Quienes la sufren pueden experimentar miedo, vergüenza y aislamiento. <strong>Esto nunca es culpa de la víctima.</strong></p>
+      </section>
+
+      <section aria-labelledby="sec-acciones">
+        <h2 id="sec-acciones">Qué hacer ahora — Pasos inmediatos</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="txt"><strong>No respondas al chantaje.</strong> Mantén evidencia (capturas, URLs), pero evita negociar con el extorsionador.</div>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <div class="txt"><strong>Protege tus cuentas.</strong> Cambia contraseñas, activa verificación en dos pasos y revisa sesiones activas.</div>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <div class="txt"><strong>Contacta apoyo especializado.</strong> ONG y líneas de ayuda pueden acompañarte legal y emocionalmente, y gestionar borrado de contenido.</div>
+          </div>
+
+          <div class="step">
+            <div class="num">4</div>
+            <div class="txt"><strong>Denuncia formal.</strong> Haz la denuncia en la institución competente y con las ONGs que trabajan en eliminación de contenido íntimo.</div>
+          </div>
+
+          <div class="step">
+            <div class="num">5</div>
+            <div class="txt"><strong>Cuida tu salud emocional.</strong> Busca acompañamiento psicológico; la sextorsión deja huellas que merecen tratamiento profesional.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-recursos" aria-labelledby="sec-recursos">
+        <h2>Recursos y organizaciones</h2>
+        <p class="muted">En esta sección encontrarás enlaces directos a organizaciones y herramientas que pueden recibir tu denuncia, acompañarte y gestionar eliminación de contenido. (Recomendamos usar los botones para abrir en una nueva pestaña.)</p>
+
+        <div class="resources" role="list">
+          <div class="resource" role="listitem">
+            <h4>Organización de apoyo A</h4>
+            <p>Atención legal y acompañamiento para víctimas de violencia digital.</p>
+            <a href="#" class="muted" aria-label="Ir a Organización A">Ir al sitio oficial →</a>
+          </div>
+
+          <div class="resource">
+            <h4>Plataforma de borrado B</h4>
+            <p>Asistencia para solicitud de eliminación en redes sociales y motores de búsqueda.</p>
+            <a href="#" aria-label="Ir a Plataforma de borrado B">Ir al sitio oficial →</a>
+          </div>
+
+          <div class="resource">
+            <h4>Línea de acompañamiento C</h4>
+            <p>Acompañamiento psicológico y trato confidencial para jóvenes y familias.</p>
+            <a href="#" aria-label="Ir a Línea de acompañamiento C">Ir al sitio oficial →</a>
+          </div>
+        </div>
+
+        <p style="margin-top:12px;color:var(--muted);font-size:14px">Si querés, actualizo estos enlaces con las ONGs oficiales que prefieras. Puedo buscarlas y reemplazar cada "#" por las URLs reales.</p>
+      </section>
+
+      <section>
+        <h2>Preguntas frecuentes (FAQ)</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Qué pasa si ya publicaron el contenido?</summary>
+            <p class="muted">Busca ayuda profesional: las ONGs pueden iniciar procesos para solicitar la eliminación a plataformas y acompañarte a denunciar ante la autoridad competente.</p>
+          </details>
+
+          <details>
+            <summary>¿Puedo denunciar sin revelar mi identidad?</summary>
+            <p class="muted">Algunas organizaciones permiten denuncias anónimas o confidenciales; lo ideal es consultar con la ONG para conocer sus protocolos.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué pruebas debo guardar?</summary>
+            <p class="muted">Capturas de pantalla, enlaces directos, mensajes, fechas y perfiles relacionados. No divulgues ni compartas el contenido con terceros innecesarios.</p>
+          </details>
+
+          <details>
+            <summary>¿Qué hace la página ChicasLibres?</summary>
+            <p class="muted">Somos una guía: orientamos sobre pasos, conectamos con ONGs y ofrecemos recursos y materiales para proteger tu privacidad y denunciar.</p>
+          </details>
+        </div>
+      </section>
+
+      <section>
+        <h2>Historias reales y reconstrucción</h2>
+        <p class="muted">(Sección pensada para publicar relatos anónimos de recuperación, pasos que funcionaron y testimonios de personas que superaron la sextorsión. Incluye recursos de reinserción, apoyo psicológico y opciones legales.)</p>
+      </section>
+
+      <section>
+        <h2>Aliados y partners</h2>
+        <div class="partners">
+          <div class="partner">ONG / Red nacional</div>
+          <div class="partner">Plataforma de borrado</div>
+          <div class="partner">Colectivo de defensa digital</div>
+          <div class="partner">Organización de salud mental</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 ChicasLibres — Un espacio seguro contra la violencia digital. Esta página no solicita datos personales ni publica información de contacto. Si sos organización y querés aparecer como partner, escribinos desde el formulario oficial (sin publicar datos personales aquí).</p>
+    </footer>
+  </div>
+
+  <script>
+    // Small JS: smooth scroll and sample analytics hook (no personal data collected)
+    document.getElementById('btn-info').addEventListener('click', function(e){ e.preventDefault(); document.querySelector('#sec-recursos').scrollIntoView({behavior:'smooth'}); });
+
+    // Replace the following comment by plugging the official NGO URLs into the hrefs above.
+    // Example: document.getElementById('btn-denuncia').href = 'https://ejemplo-ong.org/denuncia';
+
+    // Accessibility: focus outline when keyboard used
+    (function(){
+      function handleFirstTab(e) {
+        if(e.key==='Tab') document.body.classList.add('user-is-tabbing');
+      }
+      window.addEventListener('keydown', handleFirstTab);
+    })();
+  </script>
+</body>
+</html>
