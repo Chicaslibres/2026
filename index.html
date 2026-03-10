@@ -35,8 +35,6 @@ margin:auto;
 padding:30px;
 }
 
-/* HERO */
-
 .hero{
 display:flex;
 align-items:center;
@@ -85,8 +83,6 @@ border:2px solid var(--pink-1);
 color:var(--pink-1);
 }
 
-/* CARDS */
-
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -106,8 +102,6 @@ color:var(--pink-1);
 margin-top:0;
 }
 
-/* SECTIONS */
-
 section{
 margin:40px 0;
 }
@@ -116,8 +110,6 @@ h2{
 color:var(--pink-1);
 margin-bottom:12px;
 }
-
-/* STEPS */
 
 .steps{
 display:flex;
@@ -141,8 +133,6 @@ align-items:center;
 justify-content:center;
 font-weight:800;
 }
-
-/* OTHER REPORTS */
 
 .report-grid{
 display:grid;
@@ -176,8 +166,6 @@ text-decoration:none;
 font-weight:700;
 }
 
-/* FAQ */
-
 .faq{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -191,8 +179,6 @@ border-radius:10px;
 border:1px solid rgba(0,0,0,0.05);
 }
 
-/* FOOTER */
-
 footer{
 margin-top:50px;
 padding:30px;
@@ -200,8 +186,6 @@ text-align:center;
 color:var(--muted);
 font-size:14px;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:800px){
 
@@ -238,7 +222,7 @@ grid-template-columns:1fr;
 <h1>ChicasLibres</h1>
 
 <p>
-Alza tu voz. Protege tu dignidad.  
+Alza tu voz. Protege tu dignidad.<br>
 Un espacio creado para ayudar a víctimas de sextorsión,
 difamación, hackeo y suplantación de identidad.
 </p>
@@ -254,9 +238,11 @@ formas seguras de denunciar delitos digitales.
 
 <a class="btn btn-primary"
 href="https://docs.google.com/forms/d/e/1FAIpQLScgsUlijBvpZk_3UCugtzS4RkDrCqtOicpngC2nwBQa5EY1sQ/viewform"
-target="_blank">
+target="_blank"
+rel="noopener">
 
 HACER DENUNCIA ONLINE
+
 </a>
 
 <a class="btn btn-outline" href="#recursos">
@@ -341,7 +327,6 @@ Pero es importante recordar algo:
 
 </section>
 
-
 <section id="otras-denuncias">
 
 <h2>Otras denuncias</h2>
@@ -361,12 +346,13 @@ privacidad y seguridad en internet.
 Publicación de información falsa o contenido que daña tu reputación.
 </p>
 
-<a href="#">
+<a href="https://example.com/denuncia-difamacion"
+target="_blank"
+rel="noopener">
 Denuncia por difamación
 </a>
 
 </div>
-
 
 <div class="report-card">
 
@@ -376,12 +362,13 @@ Denuncia por difamación
 Cuando alguien crea un perfil falso usando tu nombre, fotos o información.
 </p>
 
-<a href="#">
-Denuncia suplantación
+<a href="https://example.com/suplantacion-identidad"
+target="_blank"
+rel="noopener">
+Denuncia por suplantación de identidad
 </a>
 
 </div>
-
 
 <div class="report-card">
 
@@ -391,8 +378,10 @@ Denuncia suplantación
 Acceso ilegal a tus cuentas o robo de tu perfil digital.
 </p>
 
-<a href="#">
-Denuncia hackeo
+<a href="https://example.com/hackeo-redes"
+target="_blank"
+rel="noopener">
+Denuncia por hackeo de redes sociales
 </a>
 
 </div>
@@ -400,7 +389,6 @@ Denuncia hackeo
 </div>
 
 </section>
-
 
 <section id="recursos">
 
@@ -412,19 +400,13 @@ acompañamiento psicológico y ayuda para eliminar contenido.
 </p>
 
 <ul>
-
 <li>Organizaciones de defensa digital</li>
-
 <li>ONG contra violencia en internet</li>
-
 <li>Centros de apoyo psicológico</li>
-
 <li>Plataformas para solicitar eliminación de contenido</li>
-
 </ul>
 
 </section>
-
 
 <section>
 
